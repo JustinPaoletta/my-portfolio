@@ -1,0 +1,137 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .content {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Quicksand';
+        height: 100%;
+        margin: 24px;
+        gap: 24px;
+
+        .message {
+            .hi {
+                display: flex;
+            }
+            
+            .wave {
+                margin-left: 8px;
+                animation-name: wave;
+                animation-duration: 1.8s;
+                animation-delay: 1s;
+                animation-iteration-count: 1;
+            }
+            
+            @keyframes wave {
+                0%   {
+                    transform: rotate(0deg);
+                }
+                15%  {
+                    transform: rotate(45deg);
+                }
+                30%  {
+                    transform: rotate(0deg);
+                }
+                45%  {
+                    transform: rotate(45deg);
+                }
+                60% {
+                    transform: rotate(0deg);
+                }
+                75%  {
+                    transform: rotate(45deg);
+                }
+                100%  {
+                    transform: rotate(0deg);
+                }
+              }
+        }
+        
+        .landing-photo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                height: 400px;
+                margin-bottom: 64px;
+            }
+        }
+    }
+}
+
+
+
+
+.buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 96px;
+    margin-bottom: 64px;
+    font-family: 'Quicksand';
+
+    .circle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 12px;
+        font-weight: bolder;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    
+    .green {
+        box-shadow: 0px 0px 5px 5px rgba(234, 131, 131, 0.7);
+        background-color: rgb(44, 106, 5);
+        animation-name: green;
+      }
+    
+    .purple {
+        box-shadow: 0px 0px 5px 5px rgba(234, 131, 131, 0.7);
+        background-color: rgb(128, 0, 113);
+        animation-name: purple;
+    }
+      
+      @keyframes green {
+        0%   {
+            box-shadow: 0px 0px 2px 2px rgba(131, 234, 148, 0.7);
+        }
+        20%  {
+            box-shadow: 0px 0px 5px 5px  rgba(131, 234, 148, 0.7);
+        }
+        40%  {
+            box-shadow: 0px 0px 3px 3px  rgba(131, 234, 148, 0.7);
+        }
+        60%  {
+            box-shadow: 0px 0px 5px 5px  rgba(131, 234, 148, 0.7);
+        }
+        100% {
+            box-shadow: 0px 0px 1px 1px  rgba(131, 234, 148, 0.7);
+        }
+      }
+    
+      @keyframes purple {
+        0%   {
+            box-shadow: 0px 0px 2px 2px rgba(234, 131, 226, 0.7);
+        }
+        20%  {
+            box-shadow: 0px 0px 5px 5px rgba(234, 131, 226, 0.7);
+        }
+        40%  {
+            box-shadow: 0px 0px 3px 3px rgba(234, 131, 226, 0.7);
+        }
+        60%  {
+            box-shadow: 0px 0px 5px 5px rgba(234, 131, 226, 0.7);
+        }
+        100% {
+            box-shadow: 0px 0px 1px 1px rgba(234, 131, 226, 0.7);
+        }
+      }
+}
