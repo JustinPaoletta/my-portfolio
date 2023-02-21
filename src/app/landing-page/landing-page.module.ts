@@ -6,7 +6,6 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { GhPagesLinkPipe } from '../pipes/gh-pages-link.pipe';
 
 
-
 @NgModule({
   declarations: [ BannerComponent, LandingPageComponent, ButtonsComponent, GhPagesLinkPipe ],
   imports: [
