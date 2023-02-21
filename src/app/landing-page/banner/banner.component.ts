@@ -1,19 +1,14 @@
-import { Component, isDevMode, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
-export class BannerComponent implements OnInit {
-  github: string = '../assets/github.svg';
-  linkedIn: string = '../assets/linkedin.png'; 
-  
-  ngOnInit(): void {
-    if (!isDevMode()) {
-      this.github = './assets/github.svg';
-      this.linkedIn = './assets/linkedin.png';
-    }
-  }
+export class BannerComponent {
 
+  github: string = '../assets/github.svg';
+  medium: string = '../assets/medium.png';
+  linkedIn: string = '../assets/linkedin.png';
+   
 }
