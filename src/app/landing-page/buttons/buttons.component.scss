@@ -19,48 +19,46 @@
         animation-iteration-count: infinite;
     }
     
-    .green {
-        box-shadow: 0px 0px 5px 5px rgba(234, 131, 131, 0.7);
-        background-color: rgb(44, 106, 5);
-        animation-name: green;
+    .blue {
+        box-shadow: 0px 0px 5px 5px rgba(131, 143, 234, 0.7);
+        animation-name: blue;
       }
     
-    .purple {
-        box-shadow: 0px 0px 5px 5px rgba(234, 131, 131, 0.7);
-        background-color: rgb(128, 0, 113);
-        animation-name: purple;
+    .pink {
+        box-shadow: 0px 0px 5px 5px rgba(234, 131, 147, 0.7);
+        animation-name: pink;
     }
       
-      @keyframes green {
+      @keyframes blue {
         0%   {
-            box-shadow: 0px 0px 2px 2px rgba(131, 234, 148, 0.7);
+            box-shadow: 0px 0px 2px 2px rgba(131, 143, 234, 0.7);
         }
         20%  {
-            box-shadow: 0px 0px 5px 5px  rgba(131, 234, 148, 0.7);
+            box-shadow: 0px 0px 5px 5px rgba(131, 143, 234, 0.7);
         }
         40%  {
-            box-shadow: 0px 0px 3px 3px  rgba(131, 234, 148, 0.7);
+            box-shadow: 0px 0px 3px 3px  rgba(131, 143, 234, 0.7);
         }
         60%  {
-            box-shadow: 0px 0px 5px 5px  rgba(131, 234, 148, 0.7);
+            box-shadow: 0px 0px 5px 5px  rgba(131, 143, 234, 0.7);
         }
         100% {
-            box-shadow: 0px 0px 1px 1px  rgba(131, 234, 148, 0.7);
+            box-shadow: 0px 0px 1px 1px  rgba(131, 143, 234, 0.7);
         }
       }
     
-      @keyframes purple {
+      @keyframes pink {
         0%   {
-            box-shadow: 0px 0px 2px 2px rgba(234, 131, 226, 0.7);
+            box-shadow: 0px 0px 2px 2px rgba(234, 131, 147, 0.7);
         }
         20%  {
-            box-shadow: 0px 0px 5px 5px rgba(234, 131, 226, 0.7);
+            box-shadow: 0px 0px 5px 5px rgba(234, 131, 147, 0.7);
         }
         40%  {
-            box-shadow: 0px 0px 3px 3px rgba(234, 131, 226, 0.7);
+            box-shadow: 0px 0px 3px 3px rgba(234, 131, 147, 0.7);
         }
         60%  {
-            box-shadow: 0px 0px 5px 5px rgba(234, 131, 226, 0.7);
+            box-shadow: 0px 0px 5px 5px rgba(234, 131, 147, 0.7);
         }
         100% {
             box-shadow: 0px 0px 1px 1px rgba(234, 131, 226, 0.7);
