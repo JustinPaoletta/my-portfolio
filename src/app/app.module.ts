@@ -8,6 +8,7 @@ import { ContactModule } from './contact/contact.module';
 import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
 import { ProjectsModule } from './projects/projects.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ProjectsModule } from './projects/projects.module';
     AppComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     LandingPageModule,

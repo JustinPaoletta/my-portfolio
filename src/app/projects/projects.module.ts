@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { ProjectsComponent } from './projects.component';
 import { CloseModule } from '../close/close.module';
@@ -9,7 +10,8 @@ import { CloseModule } from '../close/close.module';
   declarations: [ ProjectsComponent ],
   imports: [
     CommonModule,
-    CloseModule
+    CloseModule,
+    DragDropModule
   ],
 })
 export class ProjectsModule { }
