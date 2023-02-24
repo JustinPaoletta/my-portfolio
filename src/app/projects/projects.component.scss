@@ -14,13 +14,14 @@
     }
 
     .board {
+        flex-wrap: wrap;
+        gap: 24px;
         display: flex;
         margin: 8px;
         padding: 12px;
         border-radius: 5px;
 
         .swim-lane {
-            margin: 0 4px;
             padding: 8px;
             flex: 1;
             background-color: rgb(231, 231, 231);
