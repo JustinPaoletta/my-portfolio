@@ -1,4 +1,112 @@
 .projects-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    app-close {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    h2 {
+        margin-left: 32px;
+    }
+
+    .board {
+        display: flex;
+        margin: 8px;
+        padding: 12px;
+        border-radius: 5px;
+
+        .swim-lane {
+            margin: 0 4px;
+            padding: 8px;
+            flex: 1;
+            background-color: rgb(231, 231, 231);
+            border-radius: 5px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                margin-top: 8px;
+                width: fit-content;
+                padding: 4px;
+                font-weight: bolder;
+            }
+
+            h4 {
+                margin-top: 4px;
+                padding: 4px 8px;
+                font-weight: bolder;
+                border-radius: 3px;
+            }
+
+            .number {
+                margin-left: 12px;
+            }
+
+            .todo {
+                background-color: rgb(211, 211, 211);
+            }
+
+            .in-progress {
+                background-color: rgb(187, 214, 255);
+                color: rgb(0, 0, 187);
+            }
+
+            .completed {
+                background-color: rgb(158, 255, 158);
+                color: rgb(0, 75, 0);
+            }
+
+        }
+    }
+
+    .example-list {
+        border: solid 1px #ccc;
+        min-height: 60px;
+        background: white;
+        border-radius: 4px;
+        overflow: hidden;
+        display: block;
+    }
+
+    .example-box {
+        padding: 20px 10px;
+        border-bottom: solid 1px #ccc;
+        color: rgba(0, 0, 0, 0.87);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        cursor: move;
+        background: white;
+        font-size: 14px;
+    }
+
+    .cdk-drag-preview {
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+            0 8px 10px 1px rgba(0, 0, 0, 0.14),
+            0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    .cdk-drag-placeholder {
+        opacity: 0;
+    }
+
+    .cdk-drag-animating {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .example-box:last-child {
+        border: none;
+    }
+
+    .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
 }

@@ -1,4 +1,32 @@
 <div class="projects-container">
-    <p>projects works!</p>
     <app-close></app-close>
+    <h2>My Projects</h2>
+    <div class="board">
+        <div class="swim-lane">
+            <div class="title"><h4 class="todo">TODO</h4><p class="number">{{todo.length}}</p></div>
+    
+            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList, inProgressList]"
+                class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    
+        <div class="swim-lane">
+            <div class="title"><h4 class="in-progress">DEVELOPING</h4><p class="number">{{inProgress.length}}</p></div>
+    
+            <div cdkDropList #inProgressList="cdkDropList" [cdkDropListData]="inProgress" [cdkDropListConnectedTo]="[todoList, doneList]"
+                class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of inProgress" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    
+        <div class="swim-lane">
+            <div class="title"><h4 class="completed">COMPLETED</h4><p class="number">{{done.length}}</p></div>
+    
+            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList, inProgressList]"
+                class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
 </div>
