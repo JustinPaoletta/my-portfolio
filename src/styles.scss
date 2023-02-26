@@ -16,3 +16,49 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     cursor: pointer;
     text-decoration: none;
 }
+
+div.cdk-drag.example-box.cdk-drag-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    h3 {
+        margin-left: 8px;
+        padding: 20px 10px;
+    }
+
+    .bottom-line {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 20px);
+        color: white;
+        padding: 0px 10px 20px;
+    
+        .initial {
+            background-color: purple;
+            border-radius: 50%;
+            margin-right: 4px;
+            padding:12px;
+        }
+    }
+}
+
+
+div#cdk-drop-list-0.cdk-drop-list.example-list {
+    background: none;
+    border: none;
+}
+
+div#cdk-drop-list-1.cdk-drop-list.example-list {
+    background: none;
+    border: none;
+}
+
+div#cdk-drop-list-2.cdk-drop-list.example-list {
+    background: none;
+    border: none;
+}
+

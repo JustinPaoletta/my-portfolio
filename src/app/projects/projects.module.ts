@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { ProjectsComponent } from './projects.component';
 import { CloseModule } from '../close/close.module';
@@ -11,7 +12,8 @@ import { CloseModule } from '../close/close.module';
   imports: [
     CommonModule,
     CloseModule,
-    DragDropModule
+    DragDropModule,
+    MatCheckboxModule
   ],
 })
 export class ProjectsModule { }
