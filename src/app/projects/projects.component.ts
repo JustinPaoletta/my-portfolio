@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get("http://api.ipify.org/?format=json").subscribe((r) => console.log(r))
+    this.http.get("https://geolocation-db.com/json/").subscribe((r) => console.log(r))
 
     window.navigator.geolocation.getCurrentPosition((pos) => {
       let isValidLat = false;
