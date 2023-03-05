@@ -4,12 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { CloseModule } from '../close/close.module';
 
-
 @NgModule({
-  declarations: [ ContactComponent ],
-  imports: [
-    CommonModule,
-    CloseModule
-  ]
+    declarations: [ContactComponent],
+    imports: [CommonModule, CloseModule],
 })
-export class ContactModule { }
+export class ContactModule {}
