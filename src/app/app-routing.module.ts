@@ -7,17 +7,16 @@ import { ResumeComponent } from './resume/resume.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
-
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'resume', component: ResumeComponent },
-  { path: 'projects', component: ProjectsComponent }
+    { path: '', component: LandingPageComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'resume', component: ResumeComponent },
+    { path: 'projects', component: ProjectsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

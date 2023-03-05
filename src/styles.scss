@@ -9,15 +9,21 @@ html {
         }
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
 .link {
     cursor: pointer;
     text-decoration: none;
 }
 
-div.cdk-drag.example-box.cdk-drag-preview {
+div.cdk-drag.task-box.cdk-drag-preview {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,31 +40,7 @@ div.cdk-drag.example-box.cdk-drag-preview {
         display: flex;
         justify-content: space-between;
         width: calc(100% - 20px);
-        color: white;
         padding: 0px 10px 20px;
-    
-        .initial {
-            background-color: purple;
-            border-radius: 50%;
-            margin-right: 4px;
-            padding:12px;
-        }
+        color: white;
     }
 }
-
-
-div#cdk-drop-list-0.cdk-drop-list.example-list {
-    background: none;
-    border: none;
-}
-
-div#cdk-drop-list-1.cdk-drop-list.example-list {
-    background: none;
-    border: none;
-}
-
-div#cdk-drop-list-2.cdk-drop-list.example-list {
-    background: none;
-    border: none;
-}
-

@@ -9,23 +9,22 @@ import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
 import { ProjectsModule } from './projects/projects.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    LandingPageModule,
-    ContactModule,
-    AboutModule,
-    ResumeModule,
-    ProjectsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserAnimationsModule,
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        LandingPageModule,
+        ContactModule,
+        AboutModule,
+        ResumeModule,
+        ProjectsModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -3,7 +3,7 @@
     flex-direction: column;
     height: 100%;
     .content {
-        display: flex; 
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -16,7 +16,7 @@
             .hi {
                 display: flex;
             }
-            
+
             .wave {
                 margin-left: 8px;
                 animation-name: wave;
@@ -24,32 +24,32 @@
                 animation-delay: 1s;
                 animation-iteration-count: 1;
             }
-            
+
             @keyframes wave {
-                0%   {
+                0% {
                     transform: rotate(0deg);
                 }
-                15%  {
+                15% {
                     transform: rotate(45deg);
                 }
-                30%  {
+                30% {
                     transform: rotate(0deg);
                 }
-                45%  {
+                45% {
                     transform: rotate(45deg);
                 }
                 60% {
                     transform: rotate(0deg);
                 }
-                75%  {
+                75% {
                     transform: rotate(45deg);
                 }
-                100%  {
+                100% {
                     transform: rotate(0deg);
                 }
-              }
+            }
         }
-        
+
         .landing-photo-container {
             display: flex;
             flex-direction: column;
