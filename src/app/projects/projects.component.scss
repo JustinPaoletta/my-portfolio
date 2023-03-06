@@ -22,7 +22,7 @@
         display: flex;
         gap: 24px;
         color: #fff;
-        margin-left: calc(3% + 12px);
+        margin-left: 5%;
 
         h1 {
             margin-top: 12px;
@@ -36,12 +36,11 @@
 
     .board {
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 12px;
         display: flex;
-        margin: 8px;
-        padding: 12px;
+        padding: 12px 0 24px;
         border-radius: 5px;
-        margin-left: 4%;
+        margin-left: 5%;
         width: 90%;
         justify-content: center;
 
@@ -51,7 +50,7 @@
             background-color: rgb(222, 222, 222);
             border-radius: 5px;
             min-height: 216px;
-            min-width: 196px;
+            min-width: 160px;
 
             .task-list {
                 height: calc(100% - 66px);
