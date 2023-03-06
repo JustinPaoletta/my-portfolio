@@ -1,5 +1,5 @@
 <div class="projects-container">
-    <img class="background" src="../../assets/board-background.jpg" />
+    <img class="background" src="{{'../../assets/board-background.jpg' | ghPagesLink}}" />
     <app-close></app-close>
     <div class="projects-headline">
         <h1>Personal Projects</h1>
@@ -12,14 +12,9 @@
                 <p class="number">{{ todo.length }}</p>
             </div>
 
-            <div
-                cdkDropList
-                #todoList="cdkDropList"
-                [cdkDropListData]="todo"
-                [cdkDropListConnectedTo]="[doneList, inProgressList]"
-                class="task-list"
-                (cdkDropListDropped)="drop($event)"
-            >
+            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo"
+                [cdkDropListConnectedTo]="[doneList, inProgressList]" class="task-list"
+                (cdkDropListDropped)="drop($event)">
                 <div class="task-box" *ngFor="let item of todo" cdkDrag (click)="openProjectInNewTab(item.link)">
                     <div>
                         <h3 class="link">{{ item.name }}</h3>
@@ -37,21 +32,15 @@
                 <p class="number">{{ inProgress.length }}</p>
             </div>
 
-            <div
-                cdkDropList
-                #inProgressList="cdkDropList"
-                [cdkDropListData]="inProgress"
-                [cdkDropListConnectedTo]="[todoList, doneList]"
-                class="task-list"
-                (cdkDropListDropped)="drop($event)"
-            >
+            <div cdkDropList #inProgressList="cdkDropList" [cdkDropListData]="inProgress"
+                [cdkDropListConnectedTo]="[todoList, doneList]" class="task-list" (cdkDropListDropped)="drop($event)">
                 <div class="task-box" *ngFor="let item of inProgress" cdkDrag (click)="openProjectInNewTab(item.link)">
                     <div>
                         <h3 class="link">{{ item.name }}</h3>
                     </div>
                     <div class="bottom-line">
-                        <mat-checkbox (click)="unAuthorizedNotification($event)" checked="true"></mat-checkbox
-                        ><button mat-mini-fab color="primary" class="mat-elevation-z0">JP</button>
+                        <mat-checkbox (click)="unAuthorizedNotification($event)" checked="true"></mat-checkbox><button
+                            mat-mini-fab color="primary" class="mat-elevation-z0">JP</button>
                     </div>
                 </div>
             </div>
@@ -63,21 +52,16 @@
                 <p class="number">{{ done.length }}</p>
             </div>
 
-            <div
-                cdkDropList
-                #doneList="cdkDropList"
-                [cdkDropListData]="done"
-                [cdkDropListConnectedTo]="[todoList, inProgressList]"
-                class="task-list"
-                (cdkDropListDropped)="drop($event)"
-            >
+            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done"
+                [cdkDropListConnectedTo]="[todoList, inProgressList]" class="task-list"
+                (cdkDropListDropped)="drop($event)">
                 <div class="task-box" *ngFor="let item of done" cdkDrag (click)="openProjectInNewTab(item.link)">
                     <div>
                         <h3 class="link">{{ item.name }}</h3>
                     </div>
                     <div class="bottom-line">
-                        <mat-checkbox checked="true" disabled="true"></mat-checkbox
-                        ><button class="mat-elevation-z0" mat-mini-fab disabled="true">JP</button>
+                        <mat-checkbox checked="true" disabled="true"></mat-checkbox><button class="mat-elevation-z0"
+                            mat-mini-fab disabled="true">JP</button>
                     </div>
                 </div>
             </div>
