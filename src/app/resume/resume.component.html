@@ -1,4 +1,8 @@
 <div class="resume-container">
-    <p>resume works!</p>
-    <app-close></app-close>
+    <a href="" style="z-index: 1;" target="_blank">
+        <mat-icon style="z-index: 1; margin-top: 16px; margin-left: 16px;">download</mat-icon>
+    </a>
+    <pdf-viewer src="{{'../../assets/resume.pdf' | ghPagesLink }}" [render-text]="true" [original-size]="false"
+        style="position: fixed; width: 100vw; height: 100vh; overflow: scroll; z-index: 0;"></pdf-viewer>
+    <app-close style="z-index: 1;"></app-close>
 </div>
