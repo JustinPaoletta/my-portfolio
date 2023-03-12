@@ -5,6 +5,13 @@
     flex-direction: column;
     width: 100%;
 
+    .main {
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+        z-index: 0;
+    }
+
     .background {
         position: absolute;
         z-index: -1;
@@ -25,12 +32,12 @@
         margin-left: 5%;
 
         h1 {
-            margin-top: 12px;
+            margin-top: 4px;
         }
 
         img {
-            height: 60px;
-            width: 65px;
+            height: 40px;
+            width: 40px;
         }
     }
 

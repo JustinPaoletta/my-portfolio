@@ -32,6 +32,9 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     drop(event: CdkDragDrop<Project[]>): void {
         if (event.previousContainer === event.container) {
             moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+            if (event.previousIndex !== event.currentIndex) {
+                this.unAuthorizedNotification();
+            }
         } else {
             transferArrayItem(
                 event.previousContainer.data,
@@ -39,9 +42,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
                 event.previousIndex,
                 event.currentIndex
             );
+            this.unAuthorizedNotification();
         }
-
-        this.unAuthorizedNotification();
     }
 
     openProjectInNewTab(link: string): void {

@@ -1,4 +1,56 @@
 .about-container {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    app-close {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .content {
+        border: 1px solid black;
+        height: 80%;
+        width: 80%;
+        margin-left: 8%;
+        margin-top: 24px;
+        display: flex;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .posts {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        padding: 12px;
+        overflow: scroll;
+        justify-content: center;
+    }
+
+    .post {
+        padding: 20px;
+        max-height: 200px;
+        max-width: 340px;
+    }
+
+    .post:hover {
+        z-index: 2;
+    }
+
+    .me {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 188px;
+        width: 212px;
+    }
+
+    @media screen and (width<=920px) {
+        .posts {
+            padding-bottom: 200px;
+        }
+    }
 }

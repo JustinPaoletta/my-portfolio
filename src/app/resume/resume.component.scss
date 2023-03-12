@@ -1,4 +1,13 @@
 .resume-container {
+    height: 100%;
+    overflow: scroll;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    app-close {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 }

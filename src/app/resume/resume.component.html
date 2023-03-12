@@ -1,9 +1,5 @@
 <div class="resume-container">
-    <a href="https://github.com/JustinPaoletta/my-portfolio/raw/gh-pages/assets/resume.pdf" style="z-index: 1;"
-        target="_blank">
-        <mat-icon style="z-index: 1; margin-top: 16px; margin-left: 16px;">download</mat-icon>
-    </a>
+    <app-close [download]="true"></app-close>
     <pdf-viewer src="{{'../../assets/resume.pdf' | ghPagesLink }}" [render-text]="true" [original-size]="false"
-        style="position: fixed; width: 100vw; height: 100vh; overflow: scroll; z-index: 0;"></pdf-viewer>
-    <app-close style="z-index: 1;"></app-close>
+        style="width: 100vw; height: 100vh; overflow: scroll; z-index: 0;"></pdf-viewer>
 </div>
