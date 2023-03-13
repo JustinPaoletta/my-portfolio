@@ -47,7 +47,7 @@
         width: 170px;
     }
 
-    @media screen and (width<=920px) {
+    @media screen and (width<=920px) and (max-device-width : 920px) {
         .posts {
             padding-bottom: 200px;
         }
