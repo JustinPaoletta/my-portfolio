@@ -35,16 +35,16 @@
         max-width: 340px;
     }
 
-    .post:hover {
-        z-index: 2;
-    }
+    // .post:hover {
+    //     z-index: 2;
+    // }
 
     .me {
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 188px;
-        width: 212px;
+        height: 150px;
+        width: 170px;
     }
 
     @media screen and (width<=920px) {
