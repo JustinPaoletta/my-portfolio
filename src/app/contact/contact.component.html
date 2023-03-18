@@ -1,4 +1,31 @@
 <div class="contact-container">
-    <p>contact works!</p>
     <app-close></app-close>
+    <img class="background" src="{{'../../../../assets/firewatch.jpg' | ghPagesLink}}" />
+    <mat-card class="form-container">
+        <div class="top-form">
+            <div>
+                <h1>Get in Touch</h1>
+                <p>Have an employment opportunity, or just wanna say hi? Id, love to hear from you!</p>
+            </div>
+
+            <img style="max-height: 200px; max-width: 30%;" src="{{'../../../../assets/contact.png' | ghPagesLink }}" />
+        </div>
+
+        <form [formGroup]="form" #formDirective="ngForm" class="contact-form"
+            (ngSubmit)="sendEmail($event, formDirective)">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input formControlName="name" matInput type="text" name="user_name">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput type="text" name="user_email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Message</mat-label>
+                <textarea formControlName="message" matInput name="message"></textarea>
+            </mat-form-field>
+            <button [disabled]="form.invalid" mat-flat-button color="primary" type="submit" value="Send">Submit</button>
+        </form>
+    </mat-card>
 </div>
