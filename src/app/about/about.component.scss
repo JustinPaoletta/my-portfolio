@@ -10,17 +10,13 @@
         width: 100%;
     }
 
-    .content {
-        border: 1px solid black;
-        height: 90%;
-        width: 90%;
-        margin-left: 4%;
-        display: flex;
-        position: relative;
-        border-radius: 5px;
-        background-image: url('https://img.freepik.com/free-vector/gradient-universe-background_23-2149635763.jpg');
-        background-position: center;
-        background-size: cover;
+    .background {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        min-width: 100vw;
+        top: 0;
+        left: 0;
     }
 
     .posts {
@@ -30,7 +26,7 @@
         padding: 12px;
         overflow: scroll;
         justify-content: center;
-        padding-bottom: 200px;
+        padding-bottom: 100px;
     }
 
     .text {
@@ -40,29 +36,28 @@
     .post {
         padding: 20px;
         max-width: 340px;
+        border: 2px solid grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
-    // .post:hover {
-    //     z-index: 2;
-    // }
+    // .me {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     height: 150px;
+    //     width: 170px;
 
-    .me {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 150px;
-        width: 170px;
-    }
-
-    // @media screen and (width<=920px) {
-    //     .posts {
-    //         padding-bottom: 200px;
+    //     img {
+    //         height: 100%;
     //     }
     // }
 
-    // @media screen and (max-device-width : 920px) {
-    //     .posts {
-    //         padding-bottom: 200px;
+    // @media screen and (width<=440px) {
+    //     .me {
+    //         display: none;
+    //         visibility: hidden;
     //     }
     // }
 }
