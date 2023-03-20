@@ -34,6 +34,10 @@ export class ProjectsService {
                 name: 'Chrome Extension - SWN - Sports Weather News',
                 link: 'https://github.com/JustinPaoletta/',
             },
+            {
+                name: 'Web Scraping - Grab data publicly available on the web without an API',
+                link: 'https://github.com/JustinPaoletta/',
+            }
         ];
         this.done = [
             {
