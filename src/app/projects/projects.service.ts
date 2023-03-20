@@ -23,18 +23,26 @@ export class ProjectsService {
                 link: 'https://github.com/JustinPaoletta/JWT-Auth',
             },
             {
-                name: 'Portfolio - Software Engineering Portfolio',
-                link: 'https://github.com/JustinPaoletta/my-portfolio',
+                name: 'CronJobs - Automating & Scheduling Tasks',
+                link: 'https://github.com/JustinPaoletta/',
             },
             {
-                name: 'CronJobs - Automating & Scheduling Tasks',
+                name: 'Pokemon World - Catch Pokemon with Google Maps',
+                link: 'https://github.com/JustinPaoletta/Pokemon-World',
+            },
+            {
+                name: 'Chrome Extension - SWN - Sports Weather News',
                 link: 'https://github.com/JustinPaoletta/',
             },
         ];
         this.done = [
             {
-                name: 'Pokemon World - Catch Pokemon with Google Maps',
-                link: 'https://github.com/JustinPaoletta/Pokemon-World',
+                name: 'jp-health-measurements - npm package - Calculating Health Measurements Made Easy',
+                link: 'https://github.com/JustinPaoletta/jp-health-measurements',
+            },
+            {
+                name: 'Portfolio - Software Engineering Portfolio',
+                link: 'https://github.com/JustinPaoletta/my-portfolio',
             },
         ];
     }
