@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
-
-export interface Post {
-    text: string;
-    url: string;
-}
+import { Post } from './about.model';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AboutService {
-    posts: Post[];
+    private posts: Post[];
 
     constructor() {
         this.posts = [

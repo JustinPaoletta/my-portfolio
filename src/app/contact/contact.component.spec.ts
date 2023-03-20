@@ -1,22 +1,33 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ContactComponent } from './contact.component';
 
+interface TestContext {
+    component: ContactComponent;
+}
+
 describe('ContactComponent', () => {
-    let component: ContactComponent;
-    let fixture: ComponentFixture<ContactComponent>;
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
+    });
 
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            declarations: [ContactComponent],
+        TestBed.configureTestingModule({
+            imports: [MatSnackBarModule],
+            providers: [ContactComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ContactComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+        tc.component = TestBed.inject(ContactComponent);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(tc.component).toBeTruthy();
     });
 });

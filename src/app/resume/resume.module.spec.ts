@@ -1,12 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-
-import { ResumeComponent } from './resume.component';
+import { ResumeModule } from './resume.module';
 
 interface TestContext {
-    component: ResumeComponent;
+    module: ResumeModule;
 }
 
-describe('ResumeComponent', () => {
+describe('ResumeModule', () => {
     let tc: TestContext;
 
     beforeEach(() => {
@@ -15,17 +14,17 @@ describe('ResumeComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            providers: [ResumeComponent],
+            imports: [ResumeModule],
         }).compileComponents();
 
-        tc.component = TestBed.inject(ResumeComponent);
+        tc.module = TestBed.inject(ResumeModule);
     });
 
     afterEach(() => {
         tc = {} as TestContext;
     });
 
-    it('should create', () => {
-        expect(tc.component).toBeTruthy();
+    it('should create the module', () => {
+        expect(tc.module).toBeTruthy();
     });
 });

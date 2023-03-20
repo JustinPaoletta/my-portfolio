@@ -1,22 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { BannerComponent } from './banner.component';
 
+interface TestContext {
+    component: BannerComponent;
+}
+
 describe('BannerComponent', () => {
-    let component: BannerComponent;
-    let fixture: ComponentFixture<BannerComponent>;
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
+    });
 
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            declarations: [BannerComponent],
+        TestBed.configureTestingModule({
+            providers: [BannerComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(BannerComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+        tc.component = TestBed.inject(BannerComponent);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(tc.component).toBeTruthy();
     });
 });

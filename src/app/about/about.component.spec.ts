@@ -1,22 +1,35 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
+import { AboutService } from './about.service';
+import { AboutServiceMock } from './about.service.mock';
+
+interface TestContext {
+    component: AboutComponent;
+    aboutService: AboutService;
+}
 
 describe('AboutComponent', () => {
-    let component: AboutComponent;
-    let fixture: ComponentFixture<AboutComponent>;
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
+    });
 
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            declarations: [AboutComponent],
+        TestBed.configureTestingModule({
+            providers: [AboutComponent, { provide: AboutService, useClass: AboutServiceMock }]
         }).compileComponents();
 
-        fixture = TestBed.createComponent(AboutComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+        tc.component = TestBed.inject(AboutComponent);
+        tc.aboutService = TestBed.inject(AboutService);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(tc.component).toBeTruthy();
     });
 });

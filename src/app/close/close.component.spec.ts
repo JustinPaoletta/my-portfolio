@@ -1,22 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { CloseComponent } from './close.component';
 
+interface TestContext {
+    component: CloseComponent;
+}
+
 describe('CloseComponent', () => {
-    let component: CloseComponent;
-    let fixture: ComponentFixture<CloseComponent>;
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
+    });
 
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            declarations: [CloseComponent],
+        TestBed.configureTestingModule({
+            providers: [CloseComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(CloseComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+        tc.component = TestBed.inject(CloseComponent);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(tc.component).toBeTruthy();
     });
 });

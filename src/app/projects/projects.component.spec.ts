@@ -1,22 +1,33 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ProjectsComponent } from './projects.component';
 
+interface TestContext {
+    component: ProjectsComponent;
+}
+
 describe('ProjectsComponent', () => {
-    let component: ProjectsComponent;
-    let fixture: ComponentFixture<ProjectsComponent>;
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
+    });
 
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            declarations: [ProjectsComponent],
+        TestBed.configureTestingModule({
+            imports: [MatSnackBarModule],
+            providers: [ProjectsComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ProjectsComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+        tc.component = TestBed.inject(ProjectsComponent);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(tc.component).toBeTruthy();
     });
 });

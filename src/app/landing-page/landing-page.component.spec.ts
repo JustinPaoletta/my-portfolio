@@ -1,22 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
 
+interface TestContext {
+    component: LandingPageComponent;
+}
+
 describe('LandingPageComponent', () => {
-    let component: LandingPageComponent;
-    let fixture: ComponentFixture<LandingPageComponent>;
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
+    });
 
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            declarations: [LandingPageComponent],
+        TestBed.configureTestingModule({
+            providers: [LandingPageComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(LandingPageComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+        tc.component = TestBed.inject(LandingPageComponent);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(tc.component).toBeTruthy();
     });
 });
