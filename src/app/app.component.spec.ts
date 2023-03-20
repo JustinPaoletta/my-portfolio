@@ -1,18 +1,30 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+interface TestContext {
+    component: AppComponent;
+}
+
 describe('AppComponent', () => {
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [RouterTestingModule],
-            declarations: [AppComponent],
-        }).compileComponents();
+    let tc: TestContext;
+
+    beforeEach(() => {
+        tc = {} as TestContext;
     });
 
-    it('should create the app', () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.componentInstance;
-        expect(app).toBeTruthy();
+    beforeEach(async () => {
+        TestBed.configureTestingModule({
+            providers: [AppComponent],
+        }).compileComponents();
+
+        tc.component = TestBed.inject(AppComponent);
+    });
+
+    afterEach(() => {
+        tc = {} as TestContext;
+    });
+
+    it('should create', () => {
+        expect(tc.component).toBeTruthy();
     });
 });

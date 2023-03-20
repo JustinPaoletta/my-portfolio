@@ -28,11 +28,11 @@ export class ContactService {
         return this.emailCredentials;
     }
 
-    get headerText(): any {
+    get headerText(): string {
         return this.header;
     }
 
-    get subTextMessage(): any {
+    get subTextMessage(): string {
         return this.subText;
     }
 }
