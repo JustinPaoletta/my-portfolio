@@ -4,11 +4,11 @@
     <mat-card class="form-container">
         <div class="top-form">
             <div>
-                <h1>Get in Touch</h1>
-                <p>Have an employment opportunity, or just wanna say hi? Id, love to hear from you!</p>
+                <h1>{{header}}</h1>
+                <p>{{subText}}</p>
             </div>
 
-            <img style="max-height: 200px; max-width: 30%;" src="{{'../../../../assets/contact.png' | ghPagesLink }}" />
+            <img class="contact-photo" src="{{'../../../../assets/contact.png' | ghPagesLink }}" />
         </div>
 
         <form [formGroup]="form" #formDirective="ngForm" class="contact-form"

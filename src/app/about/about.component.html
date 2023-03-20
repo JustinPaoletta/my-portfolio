@@ -2,77 +2,13 @@
     <app-close></app-close>
     <img class="background" src="{{'../../../../assets/about-background.jpg' | ghPagesLink}}" />
     <div class="posts">
-        <mat-card class="post">
-            <div class="text">
-                I live in Orlando, Florida with my wonderful wife Susie and our two amazing dogs Rosie and Tito.
-            </div>
-            <img src="{{'../../assets/susie.png' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                I got my start in the tech industry in 2020 when I enrolled in Hack Reactor, an Immersive Software
-                Engineering Bootcamp. It was the best career choice I ever made! I seek out and thrive in
-                environments
-                where I'm intellectually stimulated, and software development provides just that, because the
-                learning never ends.
-            </div>
-            <img src="{{'../../assets/main-image.png' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                I'm a problem solver, I love tinkering with systems, figuring out how they work, and solving
-                problems.
-            </div>
-            <img src="{{'../../assets/brain.jpg' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                I'm a science and space junkie. I love reading about the latest discoveries being made and am
-                constantly
-                amazed by advances in technology. Being able to see back 13.7 billion years with the JWST is mind
-                boggling.
-            </div>
-            <img src="{{'../../assets/jameswebb.jpg' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                Traveling is a passion, I want to see as much of the world as possible and experience other cultures
-
-            </div>
-            <img src="{{'../../assets/rome.png' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                "A programmer's wife asks him, 'Would you go to the shop and pick up a loaf of bread? And if they
-                have
-                eggs, get a dozen.' The programmer goes to the store and returns home with 12 loaves of bread. 'They
-                had
-                eggs,' he explained."
-            </div>
-
-            <img src="{{'../../assets/programming-meme.webp' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                "For me, I am driven by two main philosophies, know more today about the world than I knew yesterday.
-                And
-                along the way, lessen the suffering of others. You'd be surprised how far that gets you." - NDT
-            </div>
-            <img src="{{'../../../../assets/neil_tyson.jpg' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                Who Dat? I'm a Saints fan through and through. If Brady is the GOAT Brees is Baby GOAT. Oh and I'll
-                crush you in Madden any day any time.
-            </div>
-            <img src="{{'../../assets/drew.jpg' | ghPagesLink}}">
-        </mat-card>
-        <mat-card class="post">
-            <div class="text">
-                The world just wouldnt be as good without the love from our pets. And these pups are two of the
-                best!
-            </div>
-            <img src="{{'../../assets/pups.png' | ghPagesLink}}">
-        </mat-card>
+        <div *ngFor="let post of posts">
+            <mat-card class="post">
+                <div class="text">
+                    {{post.text}}
+                </div>
+                <img src="{{post.url| ghPagesLink}}">
+            </mat-card>
+        </div>
     </div>
 </div>

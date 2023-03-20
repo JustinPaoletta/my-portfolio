@@ -14,11 +14,16 @@ export class ContactComponent implements OnInit, OnDestroy {
     form: FormGroup;
     emailCreds: EmailCredentials;
 
+    header: string;
+    subText: string;
+
     private _snackBar: MatSnackBar = inject(MatSnackBar);
     private contactService = inject(ContactService);
 
     ngOnInit(): void {
         this.initForm();
+        this.header = this.contactService.headerText;
+        this.subText = this.contactService.subTextMessage;
         this.emailCreds = this.contactService.getEmailCredentials();
     }
 

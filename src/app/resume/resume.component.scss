@@ -10,4 +10,11 @@
         justify-content: space-between;
         width: 100%;
     }
+
+    pdf-viewer {
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+        z-index: 0;
+    }
 }
