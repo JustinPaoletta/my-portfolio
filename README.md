@@ -1,5 +1,3 @@
-[![Build Status](http://localhost:8080/job/Portfolio/badge/icon)](http://localhost:8080/job/Portfolio/)
-
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
