@@ -1,4 +1,8 @@
-node (label: 'master') {
+pipeline {
+  agent {
+    label 'master'
+  }
+  stages {
     stage('Install') {
       steps { sh 'npm install' }
     }
@@ -11,3 +15,4 @@ node (label: 'master') {
       steps { sh 'npm run build' }
     }
   }
+}
