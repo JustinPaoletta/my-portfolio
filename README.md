@@ -1,4 +1,4 @@
-[[![Build Status](http://localhost:8080/buildStatus/icon?job=Portfolio)](http://localhost:8080/job/Portfolio/)](http://localhost:8080/buildStatus/text?job=Portfolio)
+http://localhost:8080/buildStatus/text?job=Portfolio
 
 # Portfolio
 
