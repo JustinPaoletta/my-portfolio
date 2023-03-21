@@ -22,7 +22,6 @@ export class ProjectsService {
                 name: 'NestJs Auth - JWT User Login System',
                 link: 'https://github.com/JustinPaoletta/JWT-Auth',
             },
-
             {
                 name: 'CronJobs - Automating & Scheduling Tasks',
                 link: 'https://github.com/JustinPaoletta/',
