@@ -2,6 +2,7 @@ pipeline {
   agent {
     label 'master'
   }
+  tools {nodejs "nodejs"}
   stages {
     stage('Install') {
       steps { sh 'npm install' }
