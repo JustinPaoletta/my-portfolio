@@ -1,5 +1,4 @@
-pipeline {
-  stages {
+node (label: 'build && linux') {
     stage('Install') {
       steps { sh 'npm install' }
     }
@@ -12,4 +11,3 @@ pipeline {
       steps { sh 'npm run build' }
     }
   }
-}
