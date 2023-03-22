@@ -1,3 +1,5 @@
+[![Build Status](http://localhost:8080/buildStatus/icon?job=Portfolio)](http://localhost:8080/job/Portfolio/)
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
