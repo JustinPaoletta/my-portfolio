@@ -30,8 +30,8 @@ export class AboutService {
                 url: '../../assets/jameswebb.jpg'
             },
             {
-                text: 'The world just wouldnt be as good without the love from our pets. And these pups are two of the best!',
-                url: '../../assets/pups.png'
+                text: "Who Dat? I'm a Saints fan through and through. If Brady is the GOAT Brees is Baby GOAT. Oh and I'll crush you in Madden any day any time.",
+                url: '../../assets/drew.jpg'
             },
             {
                 text: "A programmer's wife asks him, 'Would you go to the shop and pick up a loaf of bread? And if they have eggs, get a dozen.' The programmer goes to the store and returns home with 12 loaves of bread. 'They had eggs,' he explained."
@@ -43,8 +43,8 @@ export class AboutService {
                 url: '../../../../assets/neil_tyson.jpg'
             },
             {
-                text: "Who Dat? I'm a Saints fan through and through. If Brady is the GOAT Brees is Baby GOAT. Oh and I'll crush you in Madden any day any time.",
-                url: '../../assets/drew.jpg'
+                text: 'The world just wouldnt be as good without the love from our pets. And these pups are two of the best!',
+                url: '../../assets/pups.png'
             },
         ];
     }
