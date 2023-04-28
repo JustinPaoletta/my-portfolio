@@ -4,6 +4,10 @@ pipeline {
   }
   tools {nodejs "nodejs"}
   stages {
+    stage('Clear Node Modules') {
+      steps { sh 'rm -r node_modules' }
+    }
+
     stage('Install') {
       steps { sh 'npm install' }
     }
