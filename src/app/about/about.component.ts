@@ -13,7 +13,6 @@ export class AboutComponent implements OnInit {
     private aboutService: AboutService = inject(AboutService);
 
     ngOnInit(): void {
-        console.log('testing jenkins build')
         this.posts = this.aboutService.getPosts();
     }
 }
