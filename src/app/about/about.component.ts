@@ -16,3 +16,4 @@ export class AboutComponent implements OnInit {
         this.posts = this.aboutService.getPosts();
     }
 }
+
