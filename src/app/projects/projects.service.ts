@@ -10,8 +10,6 @@ export class ProjectsService {
     private inProgress: Project[];
     private done: Project[];
 
-
-    
     constructor() {
         this.todos = [
             {
