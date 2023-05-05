@@ -1,4 +1,14 @@
 pipeline {
+  void setBuildStatus(String message, String state) {
+      step([
+        $class: "GitHubCommitStatusSetter",
+        reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/my-org/my-repo"],
+        contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+        errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
+        statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
+      ]);
+    }
+
   agent {
     label 'slave-1'
   }
@@ -14,6 +24,15 @@ pipeline {
 
     stage('Build') {
       steps { sh 'npm run build' }
+    }
+  }
+
+  post {
+    success {
+      setBuildStatus("Success", "SUCCESS")
+    }
+    failure {
+      setBuildStatus("Failure", "FAILURE")
     }
   }
 }
