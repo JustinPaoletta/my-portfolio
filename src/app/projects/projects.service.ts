@@ -23,16 +23,16 @@ export class ProjectsService {
                 link: 'https://github.com/JustinPaoletta/JWT-Auth',
             },
             {
+                name: 'Chrome Extension - SWN - Sports Weather News',
+                link: 'https://github.com/JustinPaoletta/',
+            },
+            {
                 name: 'CronJobs - Automating & Scheduling Tasks',
                 link: 'https://github.com/JustinPaoletta/',
             },
             {
                 name: 'Pokemon World - Catch Pokemon with Google Maps',
                 link: 'https://github.com/JustinPaoletta/Pokemon-World',
-            },
-            {
-                name: 'Chrome Extension - SWN - Sports Weather News',
-                link: 'https://github.com/JustinPaoletta/',
             },
             {
                 name: 'Web Scraping - Grab data publicly available on the web without an API',
