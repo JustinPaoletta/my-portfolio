@@ -13,12 +13,13 @@ before_script:
   - npm install @angular/cli
 
 cache:
-  yarn: true
+  npm: true
   directories:
     - node_modules
 
 script:
   - ng build
+  - npm run test
 
 deploy:
   provider: pages
